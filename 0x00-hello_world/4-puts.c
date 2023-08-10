@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-int main()  {
-	
+int main(void) 
+{
+	char first[] = "\"Programming is like building a multilingual puzzle";
 
-	char first[] = "Programming is like building a multilingual puzzle";
+	puts(first);
 
-
-puts(first);
-
-return 0;
+        return 0;
 }
 
