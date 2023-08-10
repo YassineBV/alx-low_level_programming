@@ -3,14 +3,14 @@
 
 /**
  * main is the entry point of my program
- * return success = 0
- */ 
+ * Return: Always 0 (success)
+ */
 
 int main(void)
 {
 	char first[] = "\"Programming is like building a multilingual puzzle";
 
 	puts(first);
-
-        return (0);
+	
+	return (0);
 }
