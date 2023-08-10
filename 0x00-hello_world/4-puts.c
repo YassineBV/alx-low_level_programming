@@ -4,7 +4,7 @@
 int main()  {
 	
 
-	char first = ""Programming is like building a multilingual puzzle";
+	char first[] = "Programming is like building a multilingual puzzle";
 
 
 puts(first);
