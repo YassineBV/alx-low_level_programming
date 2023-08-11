@@ -13,6 +13,6 @@ int main(void)
 	for (; raem <= '9'; raem++)
 	printf("%c", raem);
 
-	putchar('\n')
+	putchar('\n');
 	return (0);
 }
