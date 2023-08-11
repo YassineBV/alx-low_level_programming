@@ -1,9 +1,9 @@
 #include<stdio.h>
 # include <stdlib.h>
 /**
- * main - number stored in the variable n is positive or negative
+ * main - entry of the program
  *
- *Description: his program assign a random number to the variable n
+ *Description: program that prints the alphabet in lowercase
  *
  *Return: Always 0 (success)
 */
