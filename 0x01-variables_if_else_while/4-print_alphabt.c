@@ -16,7 +16,6 @@ int main(void)
 		if (noeq != 'e' && noeq != 'q')
 		putchar(noeq);
 	}
-	
 	putchar('\n');
 	return (0);
 }
