@@ -10,8 +10,9 @@ int main(void)
 {
 	int raem = '0';
 
-	for (;raem <= '9'; raem++)
+	for (; raem <= '9'; raem++)
 	printf("%c", raem);
 
+	putchar('\n')
 	return (0);
 }
