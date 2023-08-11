@@ -2,8 +2,10 @@
 #include<time.h>
 #include<stdio.h>
 /*
- * main - number stored in the variable n is positive or negative.
+ * main - number stored in the variable n is positive or negative
+ *
  *Description: his program assign a random number to the variable n
+
  * return : Always 0 (success)
  */
 int main(void)
