@@ -6,9 +6,9 @@
  *
  *Description: his program assign a random number to the variable n
  *
- * return : Always 0 (success)
+ *@return : Always 0 (success)
  */
-int main(void)
+int main(void) 
 {
 	int n;
 
