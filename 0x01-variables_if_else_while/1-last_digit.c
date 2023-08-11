@@ -11,10 +11,10 @@
 int main(void)
 {
 	int n;
+	int last_dij;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int last_dij;
 
 	last_dij = n % 10;
 
