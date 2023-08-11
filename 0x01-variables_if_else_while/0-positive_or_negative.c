@@ -2,7 +2,7 @@
 #include<time.h>
 #include<stdio.h>
 /*
- * main - program  print whether the number stored in the variable n is positive or negative.
+ * main - number stored in the variable n is positive or negative.
  *
  * return : Always 0 (success)
  */
@@ -13,13 +13,13 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	if(n > 0)
+	if (n > 0)
 	{
 		printf("%d is positive\n", n);
 	}
 	else if (n < 0)
 	{
-		printf("%d is positive\n", n);
+		printf("%d is negative\n", n);
 	}
 	else
 	{
