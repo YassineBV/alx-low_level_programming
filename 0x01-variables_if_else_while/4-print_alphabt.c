@@ -10,7 +10,7 @@
 int main(void)
 {
 	char noeq;
-	
+
 	for (noeq = 'a'; noeq <= 'z'; noeq++)
 	{
 		if (noeq != 'e' && noeq != 'q')
