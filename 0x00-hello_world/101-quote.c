@@ -9,7 +9,7 @@
 */
 int main(void)
 {
-	const char *toerror = "and that piece of art is useful\" - Dora Korpar, 2015-10-19.\n";
+	const char *toerror = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	write(2, toerror, strlen(toerror));
 
 	return (0);
