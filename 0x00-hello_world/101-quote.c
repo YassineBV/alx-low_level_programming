@@ -5,12 +5,14 @@
  *
  *Description: program prints message to the standard error
  *
- *Return: Always 0 (success)
+ *Return: Always 1 (error)
 */
+
 int main(void)
 {
-	const char *toerror = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(2, toerror, strlen(toerror));
+	char bpl = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	return (0);
+	write(2, bpl, 59);
+
+	return (1);
 }
