@@ -2,8 +2,10 @@
 #include <string.h>
 
 /**
- * This is a multiline comment
- * main is the entry point of my program
+ * main - the entry of the program
+ *
+ * Discription: t prints exactly Programming is like
+ *
  * Return: Always 0 (success)
  */
 
