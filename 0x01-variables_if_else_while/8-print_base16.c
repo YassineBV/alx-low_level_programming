@@ -8,9 +8,9 @@
 */
 int main(void)
 {
-        int num;
+	int num;
 
-	for (num = 0; num <=15; num++)
+	for (num = 0; num <= 15; num++)
 	{
 		if (num < 10)
 		{
@@ -18,7 +18,7 @@ int main(void)
 		}
 		else
 		{
-			putchar('a' + (num -10));
+			putchar('a' + (num - 10));
 		}
 	}
 	putchar('\n');
