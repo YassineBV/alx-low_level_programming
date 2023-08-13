@@ -4,14 +4,13 @@
  *
  *Description: program prints all possible different combinations
  *
- * Description: of two digits
- *
  *Return: Always 0 (success)
 */
 int main(void)
 {
 	int ra1, ra2;
 	for (ra1 = '0'; ra1 <= '9'; ra1++)
+
 	{
 		for (ra2 = '0'; ra2 <= '9'; ra2++)
 		{
