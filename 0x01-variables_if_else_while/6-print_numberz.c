@@ -12,7 +12,7 @@ int main(void)
 {
 	int kol = '0';
 
-	while ( kol <= 9)
+	while (kol <= '9')
 	{
 	putchar(kol);
 	kol++;
