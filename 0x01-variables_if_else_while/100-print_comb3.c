@@ -9,6 +9,7 @@
 int main(void)
 {
 	int ra1, ra2;
+
 	for (ra1 = '0'; ra1 <= '9'; ra1++)
 
 	{
