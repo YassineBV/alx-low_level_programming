@@ -1,5 +1,5 @@
 #include <stdio.h>
-\**
+/**
  * main - entry of the program
  *
  *Description: print all possible combinations of two two-digit numbers
@@ -8,6 +8,7 @@
 */
 int main(void)
 {
+	
 	int mol1, mol2;
 
 	for (mol1 = 0; mol1 <= 99; mol1++)
