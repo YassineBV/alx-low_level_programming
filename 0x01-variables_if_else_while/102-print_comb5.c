@@ -8,16 +8,18 @@
 */
 int main(void)
 {
-	
+
 	int mol1, mol2;
 
 	for (mol1 = 0; mol1 <= 99; mol1++)
 	{
 		for (mol2 = mol1 + 1; mol2 <= 99; mol2++)
 		{
-			
+
 			putchar('0' + mol1 / 10);
 			putchar('0' + mol1 % 10);
+
+			putchar(' ');
 
 			putchar('0' + mol2 / 10);
 			putchar('0' + mol2 % 10);
