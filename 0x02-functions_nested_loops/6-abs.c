@@ -25,8 +25,9 @@ int _abs(int i)
 	else (i == 0) 
 	{
 		np = 0;
-		_putchar(np + 48);
-		_putchar('\n');
 	}
+	_putchar(np + 48);
+	_putchar('\n');
+	
 }
 
