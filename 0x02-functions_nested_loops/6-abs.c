@@ -2,7 +2,7 @@
 /**
  * _abs - entry of the program
  *
- *@int: program that computes the absolute value of an integer
+ *@t: program that computes the absolute value of an integer
  *
  *Return: Always 0 (success)
 */
