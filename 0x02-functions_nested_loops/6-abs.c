@@ -6,24 +6,25 @@
  *
  *Return: Always 0 (success)
 */
-int _abs(int)
+int _abs(int i)
 {
 	int np;
 
-	if (int > 0)
+	if (i > 0)
 	{
-		np = int - 0
-		_putchar(np);
+		np = i - 0
+		_putchar(np + 48);
 		_putchar('\n')
 	}
-	if else (int < 0)
+	if else (i < 0)
 	{
-		np = int + int * 2
-		_putchar(np);
+		np = i + i * 2
+		_putchar(np + 48);
 		_putchar('\n');
 	}
 	else 
-		_putchar(0);
+		np = 0
+		_putchar(np + 48);
 	-putchar('\n');
 }
 
