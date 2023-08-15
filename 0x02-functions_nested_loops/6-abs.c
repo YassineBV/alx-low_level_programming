@@ -18,11 +18,11 @@ int _abs(int i)
 	}
        	else if (i < 0)
 	{
-		np = i + i * 2;
+		np = i * -1;
 		_putchar(np + 48);
 		_putchar('\n');
 	}
-	else
+	else 
 	{
 		np = 0;
 		_putchar(np + 48);
