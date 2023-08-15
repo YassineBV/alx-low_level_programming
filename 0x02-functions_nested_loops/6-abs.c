@@ -22,7 +22,7 @@ int _abs(int i)
 		_putchar(np + 48);
 		_putchar('\n');
 	}
-	else (i == 0) 
+	else (i = 0) 
 	{
 		np = 0;
 	}
