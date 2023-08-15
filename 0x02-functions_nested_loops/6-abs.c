@@ -28,6 +28,6 @@ int _abs(int i)
 		_putchar(np + 48);
 		_putchar('\n');
 	}
-	return (0);
+	return ();
 }
 
