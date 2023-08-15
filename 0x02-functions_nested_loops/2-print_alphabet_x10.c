@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 	char str[] = "abcdefghijklmnopqrstuvwxyz";
 	int rep;
 	int abc;
-	for (rep = 0; rep < 10; i++)
+	for (rep = 0; rep < 10; rep++)
 	{
 		for (abc = 0; abc < 26; abc++)
 			_putchar(str[abc]);
