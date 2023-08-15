@@ -5,9 +5,9 @@
  *Description: program that prints the alphabet in lowercase
  *
  *Return: Always 0 (success)
-*/
+ */
 
-void print_alphabet(vprint_alphabetoid)
+ void print_alphabet(void);
 {
 	int alph = 'a';
 
