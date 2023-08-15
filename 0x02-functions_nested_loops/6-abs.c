@@ -6,24 +6,12 @@
  *
  *Return: Always 0 (success)
 */
-int _abs(int i)
+int _abs(int t)
 {
-	int np;
 
-	if (i > 0)
-	{
-		np = i - 0;
-	}
-       	else if (i < 0)
-	{
-		np = i * -1;
-	}
-	else 
-	{
-		np = 0;
-	}
-
-	_putchar(np + 48);
-	_putchar('\n');
+	if (t > 0)
+		return (t);
+	else
+		return (t * -1);
 }
 
