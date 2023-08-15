@@ -16,15 +16,17 @@ int _abs(int i)
 		_putchar(np + 48);
 		_putchar('\n');
 	}
-	if else (i < 0)
+       	else if (i < 0)
 	{
 		np = i + i * 2;
 		_putchar(np + 48);
 		_putchar('\n');
 	}
-	else 
+	else
+	{
 		np = 0;
 		_putchar(np + 48);
-	-putchar('\n');
+		-putchar('\n');
+	}
 }
 
