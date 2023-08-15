@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * print_alphabet - entry of the program
  *
  *Description: program that prints the alphabet in lowercase
  *
  *Return: Always 0 (success)
 */
 
-void print_alphabet(void)
+void print_alphabet(vprint_alphabetoid)
 {
 	int alph = 'a';
 
