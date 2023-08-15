@@ -4,7 +4,7 @@
  *
  *Description: program that checks for lowercase character
  *
- *@c: check the character 
+ *@c: check the character
  *
  *Return: return 1 if c is lowercase
 */
