@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * print_alphabet_x10 - entry of the program
  *
  *Description: program that  prints 10 times the alphabet
  *
@@ -11,6 +11,7 @@ void print_alphabet_x10(void)
 	char str[] = "abcdefghijklmnopqrstuvwxyz";
 	int rep;
 	int abc;
+
 	for (rep = 0; rep < 10; rep++)
 	{
 		for (abc = 0; abc < 26; abc++)
