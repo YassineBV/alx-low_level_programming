@@ -13,21 +13,17 @@ void _abs(int i)
 	if (i > 0)
 	{
 		np = i - 0;
-		_putchar(np + 48);
-		_putchar('\n');
 	}
        	else if (i < 0)
 	{
 		np = i * -1;
-		_putchar(np + 48);
-		_putchar('\n');
 	}
 	else 
 	{
 		np = 0;
-		_putchar(np + 48);
-		_putchar('\n');
 	}
-	
+
+	_putchar(np + 48);
+	_putchar('\n');
 }
 
