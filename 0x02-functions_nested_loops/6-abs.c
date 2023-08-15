@@ -6,7 +6,7 @@
  *
  *Return: Always 0 (success)
 */
-int(void)_abs(int i)
+int _abs(int i)
 {
 	int np;
 
