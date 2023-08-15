@@ -4,16 +4,16 @@
  *
  *Description: program that checks for lowercase character
  *
- *Return: Always 0 (success)
+ *Return: return 1 if c is lowercase
+ *        otherwase return 0    
 */
 
 int _islower(int c)
 {
-	if (c >= 97 || c <= 122)
+	if (c >= 97 && c <= 122)
 	{
-		_islower(1);
+		return (1);
 	}
 	else
-	_islower(0);
 	return (0);
 }
