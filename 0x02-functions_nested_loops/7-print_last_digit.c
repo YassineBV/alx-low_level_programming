@@ -6,8 +6,9 @@
  *
  *Return: Always 0 (success)
 */
-int print_last_digit(int ld)
+int print_last_digit(int l)
 {
 
-	return (ld % 100);
+	int ld = l % 10;
+	return (l % 10);
 }
