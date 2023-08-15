@@ -6,7 +6,7 @@
  *
  *Return: Always 0 (success)
 */
-int _abs(int i)
+int(void) _abs(int i)
 {
 	int np;
 
@@ -28,6 +28,5 @@ int _abs(int i)
 		_putchar(np + 48);
 		_putchar('\n');
 	}
-	return ();
 }
 
