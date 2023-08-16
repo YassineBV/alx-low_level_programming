@@ -7,7 +7,7 @@
  *Return: Always 0 (success)
 */
 
-int add(int, int)
+int add(int a, int b)
 {
 
 	int a, b;
@@ -18,7 +18,7 @@ int add(int, int)
 		{
 			_putchar(res + 48);
 		}
-		else(res > 9)
+		else
 		{
 			_putchar(res / 10 + 48);
 			_putchar(res % 10 + 48);
