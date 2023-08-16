@@ -10,18 +10,7 @@
 int add(int a, int b)
 {
 
-	int x, y;
-	int res;
-	res = x + y;
+	int res = a + b;
 
-		if (res <= 9)
-		{
-			_putchar(res + 48);
-		}
-		else
-		{
-			_putchar(res / 10 + 48);
-			_putchar(res % 10 + 48);
-		}
-	return ('\n');
+	return (res);
 }
