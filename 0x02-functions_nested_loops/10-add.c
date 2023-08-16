@@ -2,7 +2,9 @@
 /**
  * add - entry of the program
  *
- *Description: program  adds two integers
+ *@a: input first  integer
+ *
+ * @b: input secend integer
  *
  *Return: Always 0 (success)
 */
