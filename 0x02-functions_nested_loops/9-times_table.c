@@ -8,7 +8,7 @@
 void times_table(void)
 {
 	int i, j, pro;
-	
+
 	for (i = 0; i <= 9; i++)
 	{
 
@@ -28,7 +28,7 @@ void times_table(void)
 				_putchar(pro + 48);
 
 			}
-			else 
+			else
 			{
 				_putchar(pro / 10 + 48);
 				_putchar(pro % 10 + 48);
