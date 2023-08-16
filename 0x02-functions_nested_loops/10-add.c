@@ -10,9 +10,9 @@
 int add(int a, int b)
 {
 
-	int a, b;
+	int x, y;
 	int res;
-	res = a +b;
+	res = x + y;
 
 		if (res <= 9)
 		{
