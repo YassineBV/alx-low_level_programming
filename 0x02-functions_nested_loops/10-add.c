@@ -11,17 +11,17 @@ int add(int, int)
 {
 
 	int a, b;
-	int add;
-	add = a +b;
+	int res;
+	res = a +b;
 
-		if (add <= 9)
+		if (res <= 9)
 		{
-			_putchar(add + 48);
+			_putchar(res + 48);
 		}
-		else(add > 9)
+		else(res > 9)
 		{
-			_putchar(add / 10 + 48);
-			_putchar(add % 10 + 48);
+			_putchar(res / 10 + 48);
+			_putchar(res % 10 + 48);
 		}
 	return ('\n');
 }
