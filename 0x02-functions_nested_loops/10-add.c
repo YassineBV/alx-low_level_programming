@@ -6,8 +6,10 @@
  *
  *Return: Always 0 (success)
 */
-int add(int, int);
+
+int add(int a, int b);
 {
+
 	int a, b;
 	int add;
 	add = a +b;
