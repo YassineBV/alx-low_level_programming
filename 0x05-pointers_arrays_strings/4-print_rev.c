@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * print_rev - entry of the program
  *
- *Description: program that prints the alphabet in lower_uppercase
+ *@s: program prints prints a string, in reverse
  *
- *Return: Always 0 (success)
+ *Return: void
 */
 void print_rev(char *s)
 {
