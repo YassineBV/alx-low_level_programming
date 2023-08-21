@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * _strcpy - entry of the program
  *
- *Description: program that prints the alphabet in lower_uppercase
+ *@dest: copies the string pointed to by src
+ *@src: including the terminating null byte
  *
- *Return: Always 0 (success)
+ *Return: the pointer to dest
 */
 char *_strcpy(char *dest, char *src)
 {
