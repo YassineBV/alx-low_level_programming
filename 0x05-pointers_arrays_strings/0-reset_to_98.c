@@ -9,10 +9,10 @@
 void reset_to_98(int *n)
 {
 	*n = 402;
-	int *ha = &n;
+	int **ha = &n;
 
-	*ha = 98;
+	**ha = 98;
 
-_putchar(n / 10 + 48);
-_putchar(n % 10 + 48);
+_putchar(*n / 10 + 48);
+_putchar(*n % 10 + 48);
 }
