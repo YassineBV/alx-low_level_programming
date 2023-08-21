@@ -13,17 +13,21 @@ void puts_half(char *str)
 	for (lnt = 0; str[lnt] != '\0'; lnt++)
 		;
 	half = lnt / 2;
-
-	for (i = half; i < lnt; i++)
+	
+	if (half % 2 == 0)
 	{
-		if (half % 2 == 0)
-		{
-		_putchar(str[i + 1]);
-		}
-		else
-		{
-			_putchar(str[i]);
-		}
+			for (i = half + 1; i < lnt; i++)
+			{
+				_putchar(str[i]);
+			}
 	}
+	else
+	{
+			for (i = haf; i < lnt; i++)
+			{
+				_putchar(str[i]);
+			}
+	}
+	_putchar('\n');
 }
 
