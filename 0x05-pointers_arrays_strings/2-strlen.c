@@ -11,9 +11,6 @@ int _strlen(char *s)
 	char *pr = s;
 
 	while (*pr != '\0')
-	{
 		pr++;
-	}
-
-	return epr - s;
 }
+return pr - s;
