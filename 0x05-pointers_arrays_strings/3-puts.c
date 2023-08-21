@@ -2,7 +2,7 @@
 /**
  * _puts - entry of the program
  *
- *@str: unction that prints a string, followed by a new line, 
+ *@str: unction that prints a string, followed by a new line
  *
  *Return: void
 */
