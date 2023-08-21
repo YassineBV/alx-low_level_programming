@@ -10,7 +10,10 @@ void _puts(char *str)
 {
 
 	if (*str != '\0')
+	{
+		_putchar(str + 0);
 		str++;
-	_putchar(str + 97);
+	}
+	_putchar('\n');
 }
 
