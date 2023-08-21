@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * _puts - entry of the program
  *
- *Description: program that prints the alphabet in lower_uppercase
+ *@str: unction that prints a string, followed by a new line, 
  *
- *Return: Always 0 (success)
+ *Return: void
 */
 void _puts(char *str)
 {
