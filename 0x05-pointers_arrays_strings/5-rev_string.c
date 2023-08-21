@@ -4,7 +4,7 @@
  *
  *@s: reverses a string.
  *
- *Return: void 
+ *Return: void
 */
 void rev_string(char *s)
 {
@@ -15,10 +15,10 @@ void rev_string(char *s)
 	for (lnt = 0; s[lnt] != '\0'; lnt++)
 		;
 
-	for ( i = 0; i < lnt; i++)
+	for ( i = 0; i < lnt / 2; i++)
 	{
 		tmp = s[i];
-		s[i] = s[-i -1];
+		s[i] = s[-i - 1];
 		s[-i - 1] = tmp;
 	}
 }
