@@ -9,7 +9,7 @@
 void reset_to_98(int *n)
 {
 	*n = 402;
-	int **ha = &n;
+	int **ha = *n;
 
 	**ha = 98;
 
