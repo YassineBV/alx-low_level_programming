@@ -4,17 +4,16 @@
  *
  *@str: program prints every other character of a string
  *
- *Return: Always 0 (success)
+ *Return: void
 */
 void puts2(char *str)
 {
-	int i = 0;
-	
-	_putchar(str[i]);
-	
-	for (i = 1; str[i] != '\0'; i++)
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[i + 1]);
+		if (i % 2 == 0)
+		_putchar(str[i);
 	}
 	_putchar('\n');
 }
