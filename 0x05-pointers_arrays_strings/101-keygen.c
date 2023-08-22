@@ -15,7 +15,7 @@ int main(void)
 
 	srand(time(NULL));
 	eqal = 0;
-	while (eqal <= 2645);
+	while (eqal <= 2645)
 	{
 		m = rand() % 128;
 		eqal += m;
