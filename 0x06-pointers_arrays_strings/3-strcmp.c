@@ -1,33 +1,27 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * _strcmp - entry of the program
  *
- *Description: program that prints the alphabet in lower_uppercase
+ *@s1: program  function that compares two strings
+ *@s2: function should work exactly like strcmp
  *
- *Return: Always 0 (success)
+ *Return: comparison result
 */
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int comp = 0;
 
-	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
+	while (*s1 != 0)
+	{
+		if (*s1 != *s2)
 		{
-			s1++;
-			s2++;
+			comp = ((int)*s1 - 48) - (int)*s2 - 48);
+			break;
 		}
-	int comp = _strcmp(s1[i], s2[i]);
-	
-	if (comp == 0)
-
-	{
-		return (0);
+	*s1++;
+	*s2++;
 	}
-	else if (comp > 0)
-	{
-		return (15);
-	}
-	else 
-		return (-15);
+	return (comp);
 }
 
 
