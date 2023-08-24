@@ -12,7 +12,7 @@ void reverse_array(int *a, int n)
 	for (i = 0; i <=  n/2; i++)
 	{
 		revtm = a[i]
-		a[i] = a[n -i - 1];
+		a[i] = a[n - i - 1];
 		a[n - i - 1] = revtm
 	}
 	_putchar(a[i] + 48);
