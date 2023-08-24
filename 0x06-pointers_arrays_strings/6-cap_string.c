@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdbool.h>
 /**
  * main - entry of the program
  *
