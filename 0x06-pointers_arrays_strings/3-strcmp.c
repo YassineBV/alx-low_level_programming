@@ -9,17 +9,21 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	int comp = 0;
+	int i, j;
+	unsigned int comp = 0;
 
-	while (*s1 != '\0')
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		if (*s1 != *s2)
+		for (j = 0; s2[j] != '\0'; j++)
 		{
-			comp = ((int)*s1 - 48) - (int)*s2 - 48);
-			break;
+			if (s1[i] = s2[j])
+			{
+				comp++;
+				break;
+			}
 		}
-	s1++;
-	s2++;
+		if (s2[j] = '\0')
+			return (comp);
 	}
 	return (comp);
 }
