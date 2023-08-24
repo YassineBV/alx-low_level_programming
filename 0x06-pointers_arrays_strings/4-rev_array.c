@@ -1,21 +1,18 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * reverse_array - entry of the program
  *
- *Description: program that prints the alphabet in lower_uppercase
+ *@a: program that t reverses the content
+ *@n: of an array of integers.
  *
- *Return: Always 0 (success)
+ *Return: void
 */
 void reverse_array(int *a, int n)
 {
-	int revtm;
-	int j = n - 1;
-	int i = 0;
+	int revtm, i, j;
 
-	while (i < j)
+	for (i = 0, j = (n - 1); i < j; i++, j--)
 	{
-		i++;
-		j--;
 		revtm = a[i];
 		a[i] = a[j];
 		a[j] = revtm;
