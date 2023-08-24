@@ -4,7 +4,7 @@
  *
  *@dest:  concatenates two strings.
  *@src: use at most n bytes from src
- *
+ *@n:  use at most n bytes from src
  *Return: a pointer to the resulting string dest
 */
 char *_strncat(char *dest, char *src, int n)
@@ -19,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	for  (i = 0; i <  n && src[i] != '\0'; i++)
 	{
-		dest[len2+ i] = src[i];
+		dest[len2 + i] = src[i];
 
 	}
 
