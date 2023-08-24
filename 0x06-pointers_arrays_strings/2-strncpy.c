@@ -1,37 +1,23 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * _strncpy - entry of the program
  *
- *Description: program that prints the alphabet in lower_uppercase
- *
- *Return: Always 0 (success)
+ *@dest: program that copies a string.
+ *@src: function should work exactly like strncpy
+
+ *Return: pointer to dest
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int lend, i;
-
-	lend = 0;
-	while (dest[lend])
-		lend++;
+	int i;
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
-	{
-		dest[lend] = src [i];
+		dest[i] = src [i];
 
-		while (i < 98)
+	while (i < n)
 		{
+			dest[i] = '\0';
 			i++;
-			if ( i % 10)
-			{
-				_putchar(' ');
-			}
-			if (!(i % 10) && i)
-			{
-				_putchar('\n');
-			}
-
-
-		       dest[i] = '\0';
-	}
-return (dest);
+		}
+	return (dest);
 }
