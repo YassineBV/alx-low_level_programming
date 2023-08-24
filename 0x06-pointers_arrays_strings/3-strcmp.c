@@ -9,12 +9,13 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	int i, j;
+	int i;
+	int j;
 	unsigned int comp = 0;
 
 	for (i = 0; s1[i] != '\0'; i++)
 	{
-		for (j = 0; s1[j] != '\0'; j++)
+		for (j = 0; s2[j] != '\0'; j++)
 		{
 			if (s1[i] == s2[j])
 			{
@@ -22,10 +23,8 @@ int _strcmp(char *s1, char *s2)
 				break;
 			}
 		}
-		if (s1[j] == '\0')
+		if (s2[j] == '\0')
 			return (comp);
 	}
 	return (comp);
 }
-
-
