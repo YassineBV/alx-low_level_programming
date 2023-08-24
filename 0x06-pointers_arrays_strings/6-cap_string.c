@@ -18,7 +18,7 @@ char *cap_string(char *cap)
 		{
 			capwrd = true;
 		}
-		else if ((cap[i} >= 'a' && cap[i] <= 'z') || (cap[i] >= 'A' && cap[i] <= 'Z'))
+		else if ((cap[i] >= 'a' && cap[i] <= 'z') || (cap[i] >= 'A' && cap[i] <= 'Z'))
 		{
 			if (capwrd)
 			{
@@ -26,5 +26,7 @@ char *cap_string(char *cap)
 				capwrd = false;
 			}
 		}
-		return (cap);
+	}
+	return (cap);
+
 }
