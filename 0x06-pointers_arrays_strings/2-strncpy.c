@@ -17,7 +17,20 @@ char *_strncpy(char *dest, char *src, int n)
 	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
 		dest[lend] = src [i];
-		for ( ; i < n; i++)
+
+		while (i < 98)
+		{
+			i++;
+			if ( i % 10)
+			{
+				_putchar(' ');
+			}
+			if (!(i % 10) && i)
+			{
+				_putchar('\n');
+			}
+
+
 		       dest[i] = '\0';
 	}
 return (dest);
