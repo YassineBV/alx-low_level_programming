@@ -32,7 +32,7 @@ void print_times_table(int n)
 					_putchar((rs / 10) % 10 + 48);
 				}
 				else if (rs <= 99 && rs >= 10)
-					_putchar((rs / 10) +48);
+					_putchar((rs / 10) + 48);
 				_putchar((rs % 10) + 48);
 			}
 		_putchar('\n');
