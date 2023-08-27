@@ -11,11 +11,11 @@ int main(void)
 {
 	long prv = 1;
 	long cur = 2;
+	long fl = 0;
 
 	printf("%ld, ", prv);
 	printf("%ld", cur);
 	 
-	long fl = 0;
 
 	int i;
 
