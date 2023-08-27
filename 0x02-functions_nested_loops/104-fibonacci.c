@@ -12,12 +12,10 @@ int main(void)
 	long prv = 1;
 	long cur = 2;
 	long fl = 0;
+	int i;
 
 	printf("%ld, ", prv);
 	printf("%ld", cur);
-	 
-
-	int i;
 
 	for (i = 0; i < 96; i++)
 	{
