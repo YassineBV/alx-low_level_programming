@@ -18,6 +18,7 @@ int main(void)
 		{
 			sm  += x;
 		}
+	}
 	
 	printf("%d\n", sm);
 
