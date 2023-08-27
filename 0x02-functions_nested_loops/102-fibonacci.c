@@ -20,7 +20,7 @@ int main(void)
 	for (i = 0; i < 48 ; i++)
 	{
 		fib = cr + prv;
-		printf("%ld, ", fib);
+		printf(", %ld", fib);
 		prv = cr;
 		cr = fib;
 	}
