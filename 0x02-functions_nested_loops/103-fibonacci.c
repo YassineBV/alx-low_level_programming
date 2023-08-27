@@ -12,7 +12,8 @@ int main(void)
 	long pr = 1;
 	long cur = 2;
 
-	long evsm, sum;
+	long evsm = 0;
+	long sum = 0;
 
 	while (cur <= 4000000)
 	{
