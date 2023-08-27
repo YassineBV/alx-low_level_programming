@@ -24,6 +24,7 @@ int main(void)
 		prv = cr;
 		cr = fib;
 	}
+	printf("\n");
 	return (0);
 }
 
