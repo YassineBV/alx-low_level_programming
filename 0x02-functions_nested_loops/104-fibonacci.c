@@ -17,7 +17,7 @@ int main(void)
 	printf("%ld, ", prv);
 	printf("%ld", cur);
 
-	for (i = 0; i < 96; i++)
+	for (i = 0; i < 95; i++)
 	{
 		fl = cur + prv;
 		printf(", %ld", fl);
