@@ -15,7 +15,7 @@ int main(void)
 	prv = 1;
 
 	printf("%ld, ", prv);
-	printf("%ld, ", cr);
+	printf("%ld", cr);
 
 	for (i = 0; i < 48 ; i++)
 	{
