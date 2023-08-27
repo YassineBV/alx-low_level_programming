@@ -24,6 +24,7 @@ int main(void)
 		prv = cur;
 		cur = fl;
 	}
+	printf("\n");
 
 	return (0);
 }
