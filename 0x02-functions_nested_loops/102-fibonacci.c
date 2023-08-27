@@ -10,13 +10,14 @@
 int main(void)
 {
 	int cr, prv, i, fib;
-	cr = 1;
-	prv = 0;
 
-	printf ("%d, ", prv);
+	cr = 2;
+	prv = 1;
+
+	printf("%d, ", prv);
 	printf("%d, ", cr);
 
-	for (i = 0; i < 48 ;i++)
+	for (i = 0; i < 48 ; i++)
 	{
 		fib = cr + prv;
 		printf("%d, ", fib);
