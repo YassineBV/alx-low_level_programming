@@ -9,18 +9,18 @@
 */
 int main(void)
 {
-	int cr, prv, i, fib;
+	long cr, prv, i, fib;
 
 	cr = 2;
 	prv = 1;
 
-	printf("%d, ", prv);
-	printf("%d, ", cr);
+	printf("%ld, ", prv);
+	printf("%ld, ", cr);
 
 	for (i = 0; i < 48 ; i++)
 	{
 		fib = cr + prv;
-		printf("%d, ", fib);
+		printf("%ld, ", fib);
 		prv = cr;
 		cr = fib;
 	}
