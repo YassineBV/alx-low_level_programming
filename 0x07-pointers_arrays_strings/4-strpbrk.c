@@ -1,12 +1,11 @@
 #include "main.h"
 /**
- * _memset - entry of the program
+ * _strpbrk - entry of the program
  *
- *@s: function that fills memory with a constant byte.
- *@b: constant byte
- *@n: n bytes
+ *@s: function that searches a string
+ *@accept:  for any of a set of bytes
  *
- *Return:  pointer to the memory area s
+ *Return: pointer to the byte in s
  */
 char *_strpbrk(char *s, char *accept)
 {
