@@ -7,14 +7,14 @@
  *@n: n bytes
  *
  *Return:  pointer to the memory area s
-*/
-void simple_print_buffer(char *buffer, unsigned int size)
+ */
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int hg;
 
-	for (i = 0; i < n; i++)
+	for (hg = 0; hg < n; hg++)
 	{
-		s[i] = b;
+		s[hg] = b;
 	}
 
 	return (s);
