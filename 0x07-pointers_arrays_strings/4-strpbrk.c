@@ -18,9 +18,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[is] == accept[ja])
 				return (s + is);
-			else
-				return (NULL);
 		}
 	}
-	return (s + is);
+	return (NULL);
 }
