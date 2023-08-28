@@ -5,30 +5,24 @@
  *@s: Returns the number of bytes in the initial segment of s
  *@accept:  which consist only of bytes from accept
  *
- *Return: lenth cont
+ *Return: lenth lns
 */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
-	int cont = 0;
+	unsigned int lns, lnacc;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (lns = 0; s[lns] != '\0'; lns++)
 	{
-		if (s[i] != 32)
-		{
-			for (j = 0; accept[j] != '\0'; j++)
+		for (lnacc = 0; accept[lnacc] != s[lns]; lnacc++)
 			{
-				if (s[i] == accept[j])
+				if (accept[lnacc] == '\0')
 				{
-					cont++;
+					return (lns);
 				}
-				else
-					return (cont);
 
 			}
-		}
 	}
-
-	return (cont);
+	
+	return (lns);
 }
