@@ -4,8 +4,10 @@
  *
  *@s: Returns the number of bytes in the initial segment of s
  *@accept:  which consist only of bytes from accept
+ *
  *Return: Always 0 (success)
 */
+
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j;
