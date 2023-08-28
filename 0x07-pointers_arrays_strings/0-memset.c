@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _memset - entry of the program
  *
@@ -9,9 +8,9 @@
  *
  *Return:  pointer to the memory area s
 */
-char *_memset(char *s, char b, unsigned int n)
+void simple_print_buffer(char *buffer, unsigned int size)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < n; i++)
 	{
