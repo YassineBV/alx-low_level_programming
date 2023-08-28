@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * _memcpy - function that copies memory area
  *
- *Description: program that prints the alphabet in lower_uppercase
- *
- *Return: Always 0 (success)
+ *@dest: memory area dest
+ *@src: memory area src
+ *Return: pointer to dest
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
