@@ -6,7 +6,7 @@
  *
  *Return: Always 0 (success)
 */
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
 	unsigned int i;
 
