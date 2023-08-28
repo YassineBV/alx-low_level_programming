@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * _strchr - function that locates a character in a string
  *
- *Description: program that prints the alphabet in lower_uppercase
- *
- *Return: Always 0 (success)
+ *@s: character string s
+ *@c: character to find in s
+ *Return: null
 */
 char *_strchr(char *s, char c)
 {
