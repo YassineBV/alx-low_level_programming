@@ -17,10 +17,10 @@ char *_strpbrk(char *s, char *accept)
 		for (ja = 0; accept[ja] != '\0'; ja++)
 		{
 			if (s[is] == accept[ja])
-				return (s[is]);
+				return (s + is);
 			else
 				return (NULL);
 		}
 	}
-	return (s[is]);
+	return (s + is);
 }
