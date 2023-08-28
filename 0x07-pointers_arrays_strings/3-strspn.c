@@ -5,7 +5,7 @@
  *@s: Returns the number of bytes in the initial segment of s
  *@accept:  which consist only of bytes from accept
  *
- *Return: Always 0 (success)
+ *Return: lenth c
 */
 
 unsigned int _strspn(char *s, char *accept)
@@ -29,5 +29,5 @@ unsigned int _strspn(char *s, char *accept)
 		}
 	}
 
-	return (0);
+	return (c);
 }
