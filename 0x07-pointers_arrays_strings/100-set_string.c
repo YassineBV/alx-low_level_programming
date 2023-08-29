@@ -2,7 +2,8 @@
 /**
  * set_string - entry of the program
  *
- *@to: function that sets the value of a pointer to a char
+ *@s: function that sets the value
+ *@to: of a pointer to a char
  *
  *Return: void
 */
