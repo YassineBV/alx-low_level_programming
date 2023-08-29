@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * mul - entry of the program
  *
- *Description: program that prints the alphabet in lowercase
- *
- *Return: Always 0 (success)
+ *@a: function that
+ *@b: multiplies two integers.
+ *Return: multipl value
 */
 int mul(int a, int b)
 {
