@@ -1,12 +1,10 @@
 #include "main.h"
 /**
- * _memset - entry of the program
+ * print_chessboard - entry of the program
  *
- *@s: function that fills memory with a constant byte.
- *@b: constant byte
- *@n: n bytes
+ *@a: a function that prints the chessboard.
  *
- *Return:  pointer to the memory area s
+ *Return: void
  */
 void print_chessboard(char (*a)[8])
 {
