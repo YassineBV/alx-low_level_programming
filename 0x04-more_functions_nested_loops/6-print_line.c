@@ -14,7 +14,7 @@ void print_line(int n)
 	{
 		_putchar('\n');
 	}
-	else 
+	else
 	{
 		for (vg = 0; vg < n; vg++)
 		{
