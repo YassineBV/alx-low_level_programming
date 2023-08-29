@@ -8,19 +8,22 @@
 */
 int main(void)
 {
-	long long dnu, dmx;
-	long long anubm = 612852475143;
+	int cn;
+	long anubm = 612852475143;
 
-	double sqo = sqrt(anubm);
-
-	for (dnu = 1; dnu <= sqo; dnu++)
+	while (cn++ < anubm / 2)
 	{
-		if (anubm % dnu == 0)
+		if (anubm % cn == 0)
 		{
-			dmx = anubm / dnu;
+			anubm /= 2;
+			continue;
+		}
+		for (cn = 3; cn < anubm / 2; cn += 2)
+		{
+			if (anubm % cn == 0)
+				anubm /= cn;
 		}
 	}
-
-	printf("%lld\n", dmx);
+	printf("%ld\n", anubm);
 	return (0);
 }
