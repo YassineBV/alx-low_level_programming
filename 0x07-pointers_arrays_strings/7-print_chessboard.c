@@ -16,8 +16,8 @@ void print_chessboard(char (*a)[8])
 	{
 		for (wit = 0; wit < 8; wit++)
 		{
-			printf("%d", a[wit][len]);
-			if (len == 8)
+			printf("%c", a[wit][len]);
+			if (len == 7)
 				printf("\n");
 		}
 	}
