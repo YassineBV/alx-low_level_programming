@@ -10,9 +10,10 @@
  */
 void print_diagsums(int *a, int size)
 {
-	long long i, j;
-	long long sum1 = 0;
-	long long sum2 = 0;
+	int i, j;
+
+	int sum1 = 0;
+	int sum2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
@@ -20,14 +21,14 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 			{
-				sum1 += a[i]; 
+				sum1 += a[i*size + j];
 			}
 			if (i + j == size - 1)
 			{
-				sum2 += a[i];
+				sum2 += a[i*size + j];
 			}
 		}
 	}
-	printf("%lld, ", sum1);
-	printf("%lld", sum2);
+	printf("%d, ", sum1);
+	printf("%d", sum2);
 }
