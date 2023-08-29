@@ -1,12 +1,11 @@
 #include "main.h"
 /**
- * _memset - entry of the program
+ * print_diagsums - entry of the program
  *
- *@s: function that fills memory with a constant byte.
- *@b: constant byte
- *@n: n bytes
+ *@a: function that prints the sum of the two diagonals
+ *@size: of a square matrix of integers.
  *
- *Return:  pointer to the memory area s
+ *Return: void
  */
 void print_diagsums(int *a, int size)
 {
