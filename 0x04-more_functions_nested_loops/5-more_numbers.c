@@ -18,7 +18,7 @@ void more_numbers(void)
 			{
 				_putchar((kl / 10) + 48);
 			}
-			_putchar(kl % 10) + 48);
+			_putchar((kl % 10) + 48);
 		}
 		_putchar('\n');
 	}
