@@ -12,7 +12,7 @@ int chprm(int n, int dvt)
 		return (1);
 	else if (n % dvt == 0)
 		return (0);
-	else 
+	else
 		return (chprm(n, dvt + 1));
 }
 /**
@@ -25,7 +25,8 @@ int chprm(int n, int dvt)
 
 int is_prime_number(int n)
 {
-        if (n <= 1)
-                return (0);
-        return (chprm(n, 2));
+	if (n <= 1)
+		return (0);
+
+	return (chprm(n, 2));
 }
