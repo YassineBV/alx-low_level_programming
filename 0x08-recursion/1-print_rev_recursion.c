@@ -1,16 +1,15 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * _print_rev_recursion - entry of the program
  *
- *Description: program that prints the alphabet in lowercase
+ *@s: function that prints a string in reverse.
  *
- *Return: Always 0 (success)
+ *Return: void
 */
 void _print_rev_recursion(char *s)
 {
 	if (*s == '\0')
 	{
-		_putchar('\n');
 		return;
 	}
 	_print_rev_recursion(s + 1);
