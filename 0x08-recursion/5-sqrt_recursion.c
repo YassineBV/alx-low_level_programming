@@ -25,5 +25,5 @@ int sqwern(int g, int l)
 */
 int _sqrt_recursion(int n)
 {
-	return (sqwern(g, 1));
+	return (sqwern(n, 1));
 }
