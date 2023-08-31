@@ -13,18 +13,18 @@ int letns(char *s)
 	return (1 + letns(s + 1));
 }
 
-int is-s-palind(char *s, int begl,int enl)
+int is_s_palind(char *s, int begl,int enl)
 {
 	if (begl >= enl)
 		return (1);
 
 	if (s[begl] != s[enl])
 		return (0);
-	return (is-s-palind(s, begl + 1, enl - 1))
+	return (is_s_palind(s, begl + 1, enl - 1));
 }
 
 int is_palindrome(char *s)
 {
-	int lentofs = letns;
-	return (is-s-palind(s, 0 ,lentofs - 1));
+	int lentofs = letns(s);
+	return (is_s_palind(s, 0 ,lentofs - 1));
 }			
