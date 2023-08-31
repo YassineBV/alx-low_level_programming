@@ -6,10 +6,6 @@
  *
  *Return: Always 0 (success)
 */
-int wildcmp(char *s1, char *s2)
-{
-	return (ifident(s1, s2));
-}
 int ifident(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
@@ -22,3 +18,9 @@ int ifident(char *s1, char *s2)
 		return (ifident(s1 + 1, s2) || ifident(s1, s2 + 1));
 	return (0);
 }
+
+int wildcmp(char *s1, char *s2)
+{
+        return (ifident(s1, s2));
+}
+
