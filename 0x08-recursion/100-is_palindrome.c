@@ -22,7 +22,7 @@ int letns(char *s)
  *Return: 1 if a string is a palindrome and 0 if not
 */
 
-int is_s_palind(char *s, int begl,int enl)
+int is_s_palind(char *s, int begl, int enl)
 {
 	if (begl >= enl)
 		return (1);
@@ -42,5 +42,6 @@ int is_s_palind(char *s, int begl,int enl)
 int is_palindrome(char *s)
 {
 	int lentofs = letns(s);
-	return (is_s_palind(s, 0 ,lentofs - 1));
+
+	return (is_s_palind(s, 0, lentofs - 1));
 }
