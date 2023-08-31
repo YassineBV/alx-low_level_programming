@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * main - entry of the program
+ * ifident - function that compares two strings
  *
- *Description: program that prints the alphabet in lowercase
- *
- *Return: Always 0 (success)
+ *@s1:  returns 1 if the strings
+ *@s2:can be considered identical
+ *Return: otherwise return 0.
 */
 int ifident(char *s1, char *s2)
 {
@@ -18,9 +18,14 @@ int ifident(char *s1, char *s2)
 		return (ifident(s1 + 1, s2) || ifident(s1, s2 + 1));
 	return (0);
 }
+/**
+ * wildcmp - recursive function
+ *
+ *@s1:  returns 1 if the strings
+ *@s2:can be considered identical
+ *Return: otherwise return 0.
+*/
 
 int wildcmp(char *s1, char *s2)
 {
-        return (ifident(s1, s2));
-}
-
+	return (ifident(s1, s2));
