@@ -10,10 +10,10 @@
 int main(int argc, char *argv[])
 {
 
-	int b1 = atoi(argv[1]);
-	int b2 = atoi(argv[2]);
+	unsigned int b1 = atoi(argv[1]);
+	unsigned int b2 = atoi(argv[2]);
 
-	int mulresult = b1 * b2;
+	unsigned int mulresult = b1 * b2;
 
 	  if ( argc != 3)
         {
