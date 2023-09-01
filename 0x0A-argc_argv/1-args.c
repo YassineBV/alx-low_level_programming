@@ -3,13 +3,15 @@
 /**
  * main - entry of the program
  *
- *Description: program that prints the alphabet in lowercase
+ *@argc: program prints the number of arguments passed into it
+ *@argv: program should print a number, followed by a new line
  *
  *Return: Always 0 (success)
 */
 int main(int argc, char *argv[])
 {
 	int i = -1;
+
 	if (i < argc)
 	{
 		i = argc + i;
@@ -18,4 +20,3 @@ int main(int argc, char *argv[])
 	(void)argv;
 	return (0);
 }
-
