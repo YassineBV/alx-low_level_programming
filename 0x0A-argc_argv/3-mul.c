@@ -9,19 +9,19 @@
 */
 int main(int argc, char *argv[])
 {
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	printf("%d\n", mulresult);
+
 
 	unsigned int b1 = atoi(argv[1]);
 	unsigned int b2 = atoi(argv[2]);
 
 	unsigned int mulresult = b1 * b2;
-
-	  if ( argc != 3)
-        {
-                printf("Error\n");
-                return (1);
-        }
-	
-	printf("%d\n", mulresult);
 
 	return (0);
 }
