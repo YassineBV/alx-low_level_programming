@@ -9,18 +9,22 @@
 */
 int main(int argc, char *argv[])
 {
-	unsigned int b1, b2, mulresult;
-	b1 = atoi(argv[1]);
-	b2 = atoi(argv[2]);
-	mulresult = b1 * b2;
+	unsigned int i, mulresult;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	else
+	{
+		mulresult = 1;
 
-	printf("%d\n", mulresult);
+		for (i = 1; i < 3; i++)
+			mulresult *= atoi(argv[i]);
+
+		printf("%d\n", mulresult);
+	}
 
 	return (0);
 }
