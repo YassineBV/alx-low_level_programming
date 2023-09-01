@@ -9,6 +9,11 @@
 */
 int main(int argc, char *argv[])
 {
+	unsigned int b1, b2, mulresult;
+	b1 = atoi(argv[1]);
+	b2 = atoi(argv[2]);
+	mulresult = b1 * b2;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -16,12 +21,6 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d\n", mulresult);
-
-
-	unsigned int b1 = atoi(argv[1]);
-	unsigned int b2 = atoi(argv[2]);
-
-	unsigned int mulresult = b1 * b2;
 
 	return (0);
 }
