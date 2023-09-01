@@ -15,25 +15,26 @@ int main(int argc, char *argv[])
 
 	sumof = 0;
 
-	if (argc == 1)
-	{
+	if (argc < 2)
 		printf("0\n");
-	}
-
-	for (i = 1; i < argc; i++)
+	else
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (i = 1; i < argc; i++)
 		{
-			if (!isdigit(argv[i][j]))
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(argv[i][j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+			sumof += atoi(argv[i]);
 		}
-		sumof += atoi(argv[i]);
-	}
 
 	printf("%d\n", sumof);
+
+	}
 
 	return (0);
 }
