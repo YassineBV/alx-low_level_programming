@@ -3,8 +3,9 @@
 /**
  * main - entry of the program
  *
- *Description: program that prints the alphabet in lowercase
- *
+ *Description: program that  prints its nameits name
+ *@argc:is greater than zero
+ *@argv: pointers to strings
  *Return: Always 0 (success)
 */
 int main(int argc, char *argv[])
