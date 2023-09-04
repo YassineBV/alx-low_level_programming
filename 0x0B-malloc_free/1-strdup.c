@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 	{
 		printf("failed to allocate memory\n");
-		return (NULL);
+		return (1);
 	}
 	else
 	{
@@ -32,10 +32,10 @@ char *_strdup(char *str)
 			{
 				newstr[i] = str[i];
 			}
-			return (newstr);
+
 		}
+		return (newstr);
 	}
-	free(newstr);
 
 	return (newstr);
 }
