@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * str_concat - function that concatenates two strings 
+ * str_concat - function that concatenates two strings
  *
  *@s1: f NULL is passed, treat it as an empty string
  *@s2:The function should return NULL on failure
@@ -10,8 +10,8 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i,j;
-	char * concatstr;
+	unsigned int i, j;
+	char *concatstr;
 
 
 	if (s1 == NULL)
