@@ -10,7 +10,7 @@
 */
 char *_strdup(char *str)
 {
-	unsigned int n = strlen(str) + 1;
+	unsigned int n;
 	unsigned int i;
 	char *newstr = (char *)malloc(n * sizeof(char));
 
@@ -21,6 +21,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
+		n = strlen(str) + 1;
 		if (newstr == NULL)
 		{
 			printf("failed to allocate memory\n");
