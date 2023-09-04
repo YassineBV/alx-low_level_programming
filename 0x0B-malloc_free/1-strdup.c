@@ -15,6 +15,7 @@ char *_strdup(char *str)
 	char *newstr;
 
 	if (str == NULL)
+	{
 		return (NULL);
 	}
 	else
