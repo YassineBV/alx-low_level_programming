@@ -18,10 +18,11 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
+	buffer[0] = c;
+
 	else
 	{
-		buffer[0] = c;
-
+	
 		if (buffer == NULL)
 		{
 			return (NULL);
