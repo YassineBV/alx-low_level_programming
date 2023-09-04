@@ -14,11 +14,7 @@ char *_strdup(char *str)
 	unsigned int i;
 	char *newstr = (char *)malloc(n * sizeof(char));
 
-	if (n == 0)
-	{
-		return (NULL);
-	}
-	else if (str == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
