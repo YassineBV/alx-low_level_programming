@@ -1,78 +1,72 @@
 #include "main.h"
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
+
 /**
- * main - entry of the program
- *
- *Description: program that prints the alphabet in lowercase
- *
- *Return: Always 0 (success)
-*/
-
-char **strtow(char *str)
+ * count_words - counts the number of words in a string
+ * @str: the input string
+ * Return: the number of words
+ */
+int count_words(char *str)
 {
-	int i, j, k, lentstr, countwrd, wordlent;
-	char **wordstr;
+	int i, len, count;
 
-	lentstr = strlen(str);
+	len = strlen(str);
+	count = 0;
 
-	countwrd = 0;
-	k = 0;
-
-	if (str == NULL || *str == '\0')
-	{
-		return (NULL);
-	}
-
-
-
-	for (i = 0; i < lentstr; i++)
+	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 		{
-			countwrd++;
+			count++;
 		}
 	}
-	if (countwrd == 0)
+	return (count);
+}
+
+/**
+ * strtow - splits a string into words
+ * @str: the input string
+ * Return: a pointer to an array of words
+ */
+char **strtow(char *str)
+{
+	int i, j, k, count, len;
+	char **words;
+
+	if (str == NULL || *str == '\0' || count_words(str) == 0)
 	{
 		return (NULL);
 	}
 
-	wordstr = (char **)malloc((countwrd + 1) * sizeof(char **));
-
-	if (wordstr == NULL)
+	count = count_words(str);
+	words = malloc((count + 1) * sizeof(char *));
+	if (words == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < countwrd; i++)
+
+	k = 0;
+	for (i = 0; i < count; i++)
 	{
-		wordlent = 0;
-		while (str[k] == ' ')
-		{
+		len = 0;
+		while (isspace(str[k]))
 			k++;
-		}
-		while (str[k + wordlent] != ' ' && str[k + wordlent] != '\0')
+		while (!isspace(str[k + len]) && str[k + len])
+			len++;
+		words[i] = malloc(len + 1);
+		if (words[i] == NULL)
 		{
-			wordlent++;
-			}
-			wordstr[i] = (char *)malloc(wordlent + 1);
-
-			if (wordstr[i] == NULL)
-			{
-				for (j = 0; j < i; j++)
-				{
-					free(wordstr[j]);
-				}
-				free(wordstr);
-				return (NULL);
-			}
-			for (j = 0; j < wordlent; j++)
-			{
-				wordstr[i][j] = str[k];
-				k++;
-			}
-			wordstr[i][wordlent] = '\0';
+			for (j = 0; j < i; j++)
+				free(words[j]);
+			free(words);
+			return (NULL);
+		}
+		for (j = 0; j < len; j++)
+			words[i][j] = str[k++];
+		words[i][len] = '\0';
 	}
-	wordstr[countwrd] = NULL;
-	return (wordstr);
+	words[count] = NULL;
+	return (words);
 }
