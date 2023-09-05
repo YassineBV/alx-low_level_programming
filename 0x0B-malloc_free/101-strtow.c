@@ -13,7 +13,9 @@ char **strtow(char *str)
 {
 	int i, j, k, lentstr, countwrd, wordlent;
 	char **wordstr;
+
 	lentstr = strlen(str);
+
 	countwrd = 0;
 	k = 0;
 
@@ -35,6 +37,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
+
 	wordstr = (char **)malloc((countwrd + 1) * sizeof(char **));
 
 	if (wordstr == NULL)
@@ -53,7 +56,7 @@ char **strtow(char *str)
 			wordlent++;
 			}
 			wordstr[i] = (char *)malloc(wordlent + 1);
-			
+
 			if (wordstr[i] == NULL)
 			{
 				for (j = 0; j < i; j++)
