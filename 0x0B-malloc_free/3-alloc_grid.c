@@ -34,6 +34,7 @@ int **alloc_grid(int width, int height)
 			doublgrid[i] = (int *)malloc(width * sizeof(int));
 			if (doublgrid[i] == NULL)
 			{
+				free(doublgrid);
 				return (NULL);
 			}
 		}
