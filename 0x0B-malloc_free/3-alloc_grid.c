@@ -10,7 +10,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **doublgrid;
-	int i, j; 
+	int i, j;
 
 	if (width <= 0)
 	{
@@ -45,7 +45,5 @@ int **alloc_grid(int width, int height)
 		return (doublgrid);
 	}
 
-	return (0);
-	
-	
+	return (0);	
 }
