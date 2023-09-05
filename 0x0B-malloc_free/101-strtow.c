@@ -31,6 +31,10 @@ char **strtow(char *str)
 			countwrd++;
 		}
 	}
+	if (countwrd == 0)
+	{
+		return (NULL);
+	}
 	wordstr = (char **)malloc((countwrd + 1) * sizeof(char **));
 
 	if (wordstr == NULL)
@@ -54,7 +58,7 @@ char **strtow(char *str)
 			{
 				for (j = 0; j < i; j++)
 				{
-					free(wordstr[i]);
+					free(wordstr[j]);
 				}
 				free(wordstr);
 				return (NULL);
