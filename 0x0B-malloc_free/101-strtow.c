@@ -8,9 +8,10 @@
  *
  *Return: Always 0 (success)
 */
+
 char **strtow(char *str)
 {
-	int i, j, k, lentstr; 
+	int i, j, k, lentstr, countwrd, wordlent;
 	char **wordstr;
 
 	if (str == NULL || *str == '\0')
@@ -19,29 +20,57 @@ char **strtow(char *str)
 	}
 
 	lentstr = strlen(str);
+	countwrd = 0;
 
-	wordstr = (char **)malloc(lentstr *sizeof(char *) + 1);
-		k = 0;
-		if (wordstr == NULL)
+	if (str == NULL || *str == '\0')
+	{
+		return (NULL);
+	}
+
+
+
+	for (i = 0; i < lentstr; i++)
+	{
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 		{
-			return (NULL);
+			countwrd++;
 		}
-		for (i = 0; i < lentstr; i++)
+	}
+	wordstr = (char **)malloc((countwrd + 1) * sizeof(char **));
+
+	if (wordstr == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < countwrd; i++)
+	{
+		wordlent = 0;
+		while (str[k] == ' ')
 		{
-			for (j = 0; j < i; j++)
-			{
-				while (str[k] != ' ' && str[k] != '\0')
-				{
-					wordstr[i][j] = str[k];
-				}
+			k++;
+		}
+		while (str[k + wordlent] != ' ' && str[k + wordlent] != '\0')
+		{
+			wordlent++;
 			}
+			wordstr[i] = (char *)malloc(wordlent + 1);
 			
+			if (wordstr == NULL)
 			{
-				wordstr[i][j] = '\0';
+				for (j = 0; j < i; j++)
+				{
+					free(wordstr[i]);
+				}
+				free(wordstr);
+				return (NULL);
 			}
-			return (wordstr);
-
-		}
-	
+			for (j = 0; j < wordlent; j++)
+			{
+				wordstr[i][j] = str[k];
+				k++;
+			}
+			wordstr[i][wordlent] = '\0';
+	}
+	wordstr[countwrd] = NULL;
 	return (wordstr);
 }
