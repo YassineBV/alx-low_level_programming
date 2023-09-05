@@ -13,14 +13,9 @@ char **strtow(char *str)
 {
 	int i, j, k, lentstr, countwrd, wordlent;
 	char **wordstr;
-
-	if (str == NULL || *str == '\0')
-	{
-		return (NULL);
-	}
-
 	lentstr = strlen(str);
 	countwrd = 0;
+	k = 0;
 
 	if (str == NULL || *str == '\0')
 	{
@@ -55,7 +50,7 @@ char **strtow(char *str)
 			}
 			wordstr[i] = (char *)malloc(wordlent + 1);
 			
-			if (wordstr == NULL)
+			if (wordstr[i] == NULL)
 			{
 				for (j = 0; j < i; j++)
 				{
