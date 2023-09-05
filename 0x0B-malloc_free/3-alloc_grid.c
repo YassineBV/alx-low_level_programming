@@ -45,5 +45,5 @@ int **alloc_grid(int width, int height)
 		return (doublgrid);
 	}
 
-	return (0);	
+	return (0);
 }
