@@ -34,6 +34,5 @@ char *argstostr(int ac, char **av)
         strij[countav] = '\n';
         countav++;
     }
-    strij[countav] = '\n';
     return (strij);
 }
