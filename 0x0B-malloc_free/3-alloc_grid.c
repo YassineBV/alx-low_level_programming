@@ -21,7 +21,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	doublgrid = (int **)malloc(width * sizeof(int *));
+	doublgrid = (int **)malloc(height * sizeof(int *));
 	if (doublgrid == NULL)
 	{
 		return (NULL);
