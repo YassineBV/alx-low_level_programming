@@ -7,35 +7,34 @@
  */
 void *malloc_checked(unsigned int b)
 {
-    char * c;
-    int *i;
-    float *f;
-    double *d;
+	char * c;
+	int *i;
+	float *f;
+	double *d;
 
-    c = malloc(sizeof(char) * b);
-     if (c == NULL)
-    {
-        exit(98);
-    }
-    return (c);
-    i = malloc(sizeof(int) * b);
-    if (i == 0)
-    {
-        exit(98);
-    }
-    return (i);
-
-    f = malloc(sizeof(float) * b);
-    if (f == 0)
-    {
-        exit(98);
-    }
-    
-    return (f);
-    d = malloc(sizeof(double) * b);
-    if (d == 0)
-    {
-        exit(98);
-    }
-    return (d);
+	c = malloc(sizeof(char) * b);
+	 if (c == NULL)
+	{
+		exit(98);
+	}
+	return (c);
+	i = malloc(sizeof(int) * b);
+	if (i == 0)
+	{
+		exit(98);
+	}
+	return (i);
+	f = malloc(sizeof(float) * b);
+	if (f == 0)
+	{
+		exit(98);
+	}
+	
+	return (f);
+	d = malloc(sizeof(double) * b);
+	if (d == 0)
+	{
+		exit(98);
+	}
+	return (d);
 }
