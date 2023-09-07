@@ -9,17 +9,19 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int i, realsize;
+	unsigned int realsize;
 	int ** realc;
 
 	if (new_size > old_size)
-		new_size == 0;
+		new_size = 0;
 	if (new_size == old_size)
 		return (ptr);
 	
 	realsize = new_size;
 
-	realc = (int**)calloc(old_size, new_size);
+	realc = (int**)calloc(old_size, realsize);
+	return (realc);
+	return (NULL);
 
 
 }
