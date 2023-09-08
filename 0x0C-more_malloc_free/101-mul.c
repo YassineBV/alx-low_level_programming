@@ -1,14 +1,15 @@
 #include "main.h"
-void _puts(char *str)
+int is_digit(char *s)
 {
-
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		str++;
-	}
-
+    while (*s)
+    {
+        if (*s < '0' || *s > '9')
+            return (0);
+        s++;
+    }
+    return (1);
 }
+
 int _atoi(const char *s)
 {
 	int po = 1;
@@ -42,6 +43,7 @@ void print_integer(unsigned int num)
 }
 int main(int argc, char *argv[])
 {
+	int result;
 	(void)argc;
 
 	if (argc != 3)
@@ -49,7 +51,8 @@ int main(int argc, char *argv[])
 		_puts("Error ");
 		exit(98);
 	}
-	print_integer(_atoi(argv[1]) * _atoi(argv[2]));
+	result = _atoi(argv[1]) * _atoi(argv[2]);
+	print_integer(result);
 	_putchar('\n');
 
 	return (0);
