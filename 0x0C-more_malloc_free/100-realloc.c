@@ -9,17 +9,33 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int realsize;
-	int **realc;
+	void *realcptr;
+	unsigned int i;
+	char *p;
+	char *q;
 
-	if (new_size > old_size)
-		new_size = 0;
 	if (new_size == old_size)
 		return (ptr);
 
-	realsize = new_size;
-
-	realc = (int **)calloc(old_size, realsize);
-	return (realc);
-	return (NULL);
+	if (new_size == 0)
+	    free(ptr);
+		return (NULL);
+		
+	realcptr = malloc(new_size);
+	if (realcptr == NULL)
+	    return (NULL);
+	
+	if (ptr == NULL)
+	    return (realcptr);
+	
+	p = realcptr;
+	q = ptr;
+	
+	for (i = 0; i < old_size && i < new_size; i++)
+		{
+			p[i] = q[i];
+		}
+	
+	free(ptr);
+	return (realcptr);
 }
