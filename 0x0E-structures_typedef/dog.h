@@ -41,4 +41,5 @@ typedef struct dog dog_t;
 dog_t *new_dog(char *name, float age, char *owner);
 int member_Lent(char *memb);
 char *_strcpy(char *dest, char *src);
+void free_dog(dog_t *d);
 #endif /* DOG_H */
