@@ -7,7 +7,7 @@
  *
  * Return: Always 0 (success).
  */
-int main()
+int main(void)
 {
 	printf("Name of source file: %s\n", __FILE__);
 
