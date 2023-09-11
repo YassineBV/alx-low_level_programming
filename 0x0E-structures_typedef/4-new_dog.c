@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "dog.h"
 #include <stdlib.h>
+/**
+ * member_Lent - Calculates the length of a string.
+ * @memb: The string to calculate the length of.
+ *
+ * Return: The length of the string.
+ */
 int member_Lent(char *memb)
 {
 	int i = 0;
@@ -10,6 +16,13 @@ int member_Lent(char *memb)
 	}
 	return (i);
 }
+/**
+ * _strcpy - Copies a string from source to destination.
+ * @dest: Destination string.
+ * @src: Source string.
+ *
+ * Return: Pointer to the destination string.
+ */
 char *_strcpy(char *dest, char *src)
 {
 	int i;
@@ -22,6 +35,15 @@ char *_strcpy(char *dest, char *src)
 
 	return (dest);
 }
+/**
+ * new_dog - Creates a new dog structure and initializes its values.
+ * @name: Name of the dog.
+ * @age: Age of the dog.
+ * @owner: Owner of the dog.
+ *
+ * Return: A pointer to the new dog structure.
+ *         NULL if memory allocation fails.
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog1;
