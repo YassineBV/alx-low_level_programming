@@ -1,5 +1,26 @@
 #include <stdio.h>
 #include "dog.h"
+member_Lent(char *memb)
+{
+	imt i = 0;
+	while (memb != '\0' && memb[i])
+	{
+		i++
+	}
+	return (i);
+}
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog1;
@@ -27,25 +48,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (dog1);
 	
 
-}
-member_Lent(char *memb)
-{
-	imt i = 0;
-	while (memb != '\0' && memb[i])
-	{
-		i++
-	}
-	return (i);
-}
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
-
-	return (dest);
 }
