@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int fstnm, sctnm;
+	int fstnm, sctnm, rlt;
 	int (*ptfnct)(int, int);
 
 	if (argc != 4)
@@ -34,8 +34,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
+	rlt = ptfnct(fstnm, sctnm);
 
-	printf("%d\n", ptfnct(fstnm, sctnm));
+	printf("%d\n", rlt);
 
 	return (0);
 }
