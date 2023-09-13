@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	opcod_funct((char*) &main, i);
+	opcod_funct((char *) &main, i);
 
-	return 0;
+	return (0);
 }
