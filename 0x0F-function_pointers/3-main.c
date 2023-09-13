@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 	if (ptfnct == NULL)
 	{
 		printf("Error\n");
+		exit(99);
 	}
 	if ((argv[2][0] == '/' || argv[2][0] == '%') && (*argv[3] == '0'))
 	{
