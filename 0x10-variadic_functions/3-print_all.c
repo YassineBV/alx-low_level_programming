@@ -45,6 +45,8 @@ void print_all(const char * const format, ...)
 		}
 		h++;
 	}
-	va_end(type_ptr);
 	printf("\n");
+
+	va_end(type_ptr);
+
 }
