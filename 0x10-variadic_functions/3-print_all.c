@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 	va_start(type_ptr, format);
 
 
-	while (h < length && format[h] != '\0')
+	while (format && format[h])
 	{
 		if (h == length - 1)
 			separt = "";
