@@ -7,20 +7,20 @@
  */
 size_t list_len(const list_t *h)
 {
-    size_t nd_count = 0;
+	size_t nd_count = 0;
 
-    
-    if (h != NULL)
-    {
-        nd_count++;
-        while (h->next != NULL)
-        {
-            nd_count++;
-            h = h->next;
-        }
-        
-        
-    }
-    return (nd_count);
+
+	if (h != NULL)
+	{
+		nd_count++;
+		while (h->next != NULL)
+		{
+			nd_count++;
+			h = h->next;
+		}
+
+
+	}
+	return (nd_count);
 
 }
