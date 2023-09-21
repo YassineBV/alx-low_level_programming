@@ -5,12 +5,17 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
+/**
+ * struct list_s - Single linked list structure
+ * @str: String
+ * @len: Length of the string
+ * @next: Pointer to the next node
+ */
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 
 
