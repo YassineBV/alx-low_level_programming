@@ -1,23 +1,21 @@
 section .data
     Holberton_prnt db "Hello, Holberton",10,0
+    frmt_str_prntf: db "%s", 10, 0
 
     str_lent: equ $-Holberton_prnt
-
-
-frmt_str_prntf: db "%s", 0
-
-section .text
+    
+    section .text
     
     global main
     extern printf
 
 main:
-    push rdp
-    push str_lent
+    push rbp
     mov rdi, Holberton_prnt
     mov rsi, frmt_str_prntf
+    mov rdx, str_lent
     call printf
-    pop rdp
-    pop str_lent
+    pop rbp
+    mov rax,0
     ret
 
