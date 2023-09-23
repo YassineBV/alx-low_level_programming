@@ -3,18 +3,21 @@ section .data
 
     str_lent: equ $-Holberton_prnt
 
-extern printf
 
+frmt_str_prntf: db "%s", 0
 
 section .text
     
     global main
+    extern printf
 
 main:
     push rdp
+    push str_lent
     mov rdi, Holberton_prnt
-    mov rsi, str_lent
+    mov rsi, frmt_str_prntf
     call printf
     pop rdp
+    pop str_lent
     ret
 
