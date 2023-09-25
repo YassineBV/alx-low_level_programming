@@ -8,17 +8,11 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t nd_coun = 0;
-	listint_t *travrs_ptr;
+	const listint_t *travrs_ptr;
 
-	travrs_ptr = malloc(sizeof(listint_t));
 
-	if (travrs_ptr == NULL)
-	{
-		free(travrs_ptr);
-		return ((size_t)(NULL));
-	}
-	travrs_ptr->next = h->next;
-	travrs_ptr->n = h->n;
+
+	travrs_ptr = h;
 
 	while (travrs_ptr != NULL)
 	{
@@ -26,6 +20,7 @@ size_t print_listint(const listint_t *h)
 		nd_coun++;
 		travrs_ptr = travrs_ptr->next;
 	}
+
 
 	return (nd_coun);
 
