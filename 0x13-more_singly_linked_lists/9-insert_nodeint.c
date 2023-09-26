@@ -36,12 +36,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 				ptr_tmp = ptr_befIdx->next;
 				ptr_befIdx->next = ptr_atIdx;
 				ptr_atIdx->next = ptr_tmp;
+				return (ptr_atIdx);
 			}
 
 			ptr_befIdx = ptr_befIdx->next;
 			chek_indx++;
 
 		}
-	return (*head);
+		return (NULL);
 }
 
