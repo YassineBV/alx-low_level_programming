@@ -38,8 +38,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		if (idx == 0)
 		{
+			ptr_atIdx->next = *head;
 			*head = ptr_atIdx;
-			ptr_atIdx->next = ptr_befIdx;
 		}
 		if (chek_indx == idx - 1)
 		{
