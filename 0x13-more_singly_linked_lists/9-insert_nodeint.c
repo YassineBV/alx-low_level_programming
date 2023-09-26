@@ -11,7 +11,7 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *ptr_befIdx, *ptr_atIdx, *ptr_tmp;
+	listint_t *ptr_befIdx, *ptr_atIdx;
 	unsigned int chek_indx = 0;
 
 	if (*head == NULL)
@@ -33,20 +33,19 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
-		while (ptr_befIdx != NULL)
+	while (ptr_befIdx != NULL)
+	{
+		if (chek_indx == idx - 1)
 		{
-			if (chek_indx == idx - 1)
-			{
-				ptr_tmp = ptr_befIdx->next;
-				ptr_befIdx->next = ptr_atIdx;
-				ptr_atIdx->next = ptr_tmp;
-				return (ptr_atIdx);
-			}
-
-			ptr_befIdx = ptr_befIdx->next;
-			chek_indx++;
-
+			ptr_atIdx->next = ptr_befIdx->next;
+			ptr_befIdx->next = ptr_atIdx;
+			return (ptr_atIdx);
 		}
+
+		ptr_befIdx = ptr_befIdx->next;
+		chek_indx++;
+
+	}
 		return (NULL);
 }
 
