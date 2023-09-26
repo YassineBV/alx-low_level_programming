@@ -29,6 +29,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		if (is_indx == index)
 		{
 			ptr_indx = ptr_tail;
+			if (ptr_indx == NULL)
+			{
+				return (NULL);
+			}
 		}
 		ptr_tail = ptr_tail->next;
 		is_indx++;
