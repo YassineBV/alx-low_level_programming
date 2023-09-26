@@ -16,7 +16,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int chek_indx = 0;
 
 	ptr_atIdx = malloc(sizeof(listint_t));
-
 	if (ptr_atIdx == NULL)
 	{
 		free(ptr_atIdx);
@@ -40,6 +39,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			ptr_atIdx->next = *head;
 			*head = ptr_atIdx;
+			return (*head);
 		}
 		if (chek_indx == idx - 1)
 		{
