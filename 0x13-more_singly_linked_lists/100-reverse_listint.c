@@ -11,17 +11,14 @@ listint_t *reverse_listint(listint_t **head)
 
 	if (*head == NULL)
 		return (NULL);
-	else
+	while (*head != NULL)
 	{
-		while (*head != NULL)
-		{
-			travrs_ptr1 = (*head)->next;
-			(*head)->next = travrs_ptr2;
-			travrs_ptr2 = *head;
-			*head = travrs_ptr1;
+		travrs_ptr1 = (*head)->next;
+		(*head)->next = travrs_ptr2;
+		travrs_ptr2 = *head;
+		*head = travrs_ptr1;
 
-		}
-		*head = travrs_ptr2;
 	}
+	*head = travrs_ptr2;
 	return (*head);
 }
