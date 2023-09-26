@@ -29,6 +29,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	ptr_atIdx->next = NULL;
 
 	ptr_befIdx = *head;
+	if (ptr_befIdx == NULL)
+	{
+		return (NULL);
+	}
 		while (ptr_befIdx != NULL)
 		{
 			if (chek_indx == idx - 1)
