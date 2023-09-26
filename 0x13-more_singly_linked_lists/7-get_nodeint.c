@@ -25,14 +25,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	while (ptr_tail != NULL)
 	{
-		
+
 		if (is_indx == index)
 		{
 			ptr_indx = ptr_tail;
-			return (ptr_indx);
 		}
 		ptr_tail = ptr_tail->next;
 		is_indx++;
 	}
-	return (NULL);
+	return (ptr_indx);
 }
