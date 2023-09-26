@@ -34,7 +34,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
-	while (ptr_befIdx != NULL)
+	while (ptr_befIdx->next != NULL)
 	{
 		if (idx == 0)
 		{
@@ -50,6 +50,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		ptr_befIdx = ptr_befIdx->next;
 		chek_indx++;
 	}
-		return (NULL);
+		return (ptr_atIdx);
 }
 
