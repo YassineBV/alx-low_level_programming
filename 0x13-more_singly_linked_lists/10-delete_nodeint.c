@@ -29,15 +29,15 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		while (ptr_beIdx != NULL)
 		{
-			if (inx == index)
+			if (inx == index - 1 && ptr_beIdx->next != NULL)
 			{
+				delet_ptr = ptr_beIdx->next;
 				ptr_beIdx->next = delet_ptr->next;
 				free(delet_ptr);
 				delet_ptr = NULL;
 				return (1);
 			}
-			ptr_beIdx = delet_ptr;
-			delet_ptr = delet_ptr->next;
+			ptr_beIdx = ptr_beIdx->next;
 			inx++;
 		}
 	}
