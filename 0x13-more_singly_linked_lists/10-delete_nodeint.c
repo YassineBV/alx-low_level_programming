@@ -23,6 +23,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		*head = delet_ptr->next;
 		free(delet_ptr);
 		delet_ptr = NULL;
+		return (1);
 	}
 	else
 	{
@@ -39,8 +40,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			delet_ptr = delet_ptr->next;
 			inx++;
 		}
-
 	}
 	return (-1);
-
 }
