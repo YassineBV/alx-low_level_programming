@@ -6,14 +6,15 @@
 void print_number(int n)
 {
 	int tpm;
-	int pw = 1;
+	int pw;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		n = n * -1;
 	}
 	tpm = n;
+	pw = 1;
 
 	while (tpm > 9)
 	{
