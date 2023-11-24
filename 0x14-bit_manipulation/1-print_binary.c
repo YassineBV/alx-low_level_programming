@@ -1,9 +1,15 @@
 #include "main.h"
 #include <math.h>
 int countbit(unsigned long int n);
+/**
+ * countbit - Counts the number of set bits.
+ * @n: The unsigned long integer to count the bits in.
+ *
+ * Return: The number of set bits in the given unsigned long integer.
+ */
 int countbit(unsigned long int n)
 {
-	int count;
+	unsigned long int count;
 
 	for (count = 0; n != 0; n >>= 1)
 	{
@@ -18,7 +24,8 @@ int countbit(unsigned long int n)
  */
 void print_binary(unsigned long int n)
 {
-	int i, x, f;
+	unsigned long int x, f;
+	int i;
 
 	f = countbit(n);
 
@@ -32,12 +39,13 @@ void print_binary(unsigned long int n)
 	{
 		for (i = f - 1 ; i >= 0; i--)
 		{
-			x = n  & (1 << i);
+			x = n  & (1UL << i);
 			if (x != 0)
 			{
-				x = 1;
+				_putchar('1');
 			}
-			_putchar(x + 48);
+			else
+			    _putchar('0');
 		}
 	}
 }
