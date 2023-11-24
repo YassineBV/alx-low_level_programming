@@ -24,21 +24,22 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		
+
 		_putchar('0');
 	}
-	
+
 	if (n > 0)
 	{
 		for (i = f - 1 ; i >= 0; i--)
 		{
 			x = n  & (1 << i);
 			if (x != 0)
-			    x = 1;
-			
+			{
+				x = 1;
+			}
 			_putchar(x + 48);
 		}
 	}
-	
-	
+
+
 }
