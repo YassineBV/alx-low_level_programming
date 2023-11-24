@@ -8,30 +8,33 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-    unsigned long int x, i;
-    int count = 0;
+	unsigned long int x, i;
+	int count = 0;
 
-    x = sizeof(unsigned long int) * 8;
+	x = sizeof(unsigned long int) * 8;
 
-    for (i = 0; i < x; i++)
-    {
-        bool x = false;
-        bool z = false;
-        if (n & (1Ul << i))
-            x = true;
-        if (m & (1UL << i))
-            z = true;
-        if (z == false)
-        {
-            if (x == true)
-                count++;
-        }
-        if (z == true)
-        {
-            if (x == false)
-               count++;
-        }
+	for (i = 0; i < x; i++)
+	{
+		bool x = false;
+		bool z = false;
 
-    }
-    return (count);
+		if (n & (1Ul << i))
+			x = true;
+		if (m & (1UL << i))
+			z = true;
+		if (z == false)
+		{
+			if (x == true)
+				count++;
+		}
+		if (z == true)
+		{
+			if (x == false)
+			{
+				count++;
+			}
+		}
+
+	}
+	return (count);
 }
