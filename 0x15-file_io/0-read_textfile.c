@@ -10,7 +10,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *bufread;
 	int fd, toread;
-	int towrite;
+	
 
 	if (filename == NULL)
 	    return (0);
@@ -32,10 +32,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	bufread[toread] = '\0';
-	towrite = write(1, bufread, toread);
-	if (towrite == -1 || towrite != toread)
+	printf("%s\n", bufread);
+	if (toread == -1)
 	    return (0);
 	free(bufread);
 	close(fd);
-	return (towrite);
+	return (toread);
 }
