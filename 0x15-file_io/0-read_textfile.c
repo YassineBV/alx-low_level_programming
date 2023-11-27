@@ -16,12 +16,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd != 3 || filename == NULL)
 	{
 		return (0);
-	}   
+	}
 	bufread = malloc(letters + 1);
 
 	if (bufread == NULL)
 		return (0);
-  
+
 	toread = read(fd, bufread, letters);
 
 	bufread[toread] = '\0';
@@ -29,6 +29,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!toread)
 		return (0);
 	printf("%s\n", bufread);
-	close(fd);   
-	return(toread);   
+	close(fd);
+	return (toread);
 }
