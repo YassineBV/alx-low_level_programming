@@ -9,12 +9,13 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *bufread;
-	int fd, toread;
+	size_t fd, toread;
+	size_t towrite;
 	
 
 	fd = open(filename, O_RDONLY);
 
-	if (fd < 0 || filename == NULL)
+	if (!fd || filename == NULL)
 	{
 		return (0);
 	}
@@ -23,13 +24,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (bufread == NULL)
 		return (0);
 
-	toread = write(fd, bufread, letters);
-
-	bufread[toread] = '\0';
-
+	toread = read(fd, bufread, letters);
 	if (!toread)
 		return (0);
-	printf("%s\n", bufread);
+
+	bufread[toread] = '\0';
+	towrite = write(1, bufread, toread);
+	if (towrite != toread)
+	    return (0);
+
 	close(fd);
-	return (toread);
+	return (towrite);
 }
