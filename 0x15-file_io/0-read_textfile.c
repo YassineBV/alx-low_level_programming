@@ -9,13 +9,16 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *bufread;
-	size_t fd, toread;
-	size_t towrite;
+	int fd, toread;
+	int towrite;
+
+	if (filename == NULL)
+	    return (0);
 	
 
 	fd = open(filename, O_RDONLY);
 
-	if (!fd || filename == NULL)
+	if (fd == -1 )
 	{
 		return (0);
 	}
@@ -25,12 +28,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	toread = read(fd, bufread, letters);
-	if (!toread)
+	if (toread == -1)
 		return (0);
 
 	bufread[toread] = '\0';
 	towrite = write(1, bufread, toread);
-	if (towrite != toread)
+	if (towrite == -1 || towrite != toread)
 	    return (0);
 	free(bufread);
 	close(fd);
