@@ -9,7 +9,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *bufread;
-	size_t fd, toread;
+	int fd, toread;
+	
 
 	fd = open(filename, O_RDONLY);
 
@@ -22,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (bufread == NULL)
 		return (0);
 
-	toread = read(fd, bufread, letters);
+	toread = write(fd, bufread, letters);
 
 	bufread[toread] = '\0';
 
