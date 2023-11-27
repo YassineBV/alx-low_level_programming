@@ -12,6 +12,8 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
+	if (text_content == NULL)
+	    text_content = "";
 
 	fds = open(filename, O_RDONLY | O_WRONLY | O_CREAT, 0600);
 	txtLent = strlen(text_content);
