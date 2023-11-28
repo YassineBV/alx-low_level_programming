@@ -58,17 +58,17 @@ int main(int ac, char **av)
 	}
 	while ((toread = read(fd1, reaBuf, 1024)) > 0)
 	{
-		if (toread == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
 		toWrit = write(fd2, reaBuf, toread);
 		if (toWrit < 0)
 		{
 			dprintf(2, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
+	}
+	if (toread == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
 	}
 	closeFiles(fd1, fd2);
 	return (0);
