@@ -47,12 +47,12 @@ int main(int ac, char **av)
             exit(99);
         }
     }
-	if (close(fd1) == -1)
+	if (close(fd1) != 0)
 	{
 		dprintf(2, "Error: Can't close fd1 %d\n", fd1);
 		exit(100);
 	}
-	if (close(fd2) == -1)
+	if (close(fd2) != 0)
 	{
 		dprintf(2, "Error: Can't close fd2 %d\n", fd2);
 		exit(100);
