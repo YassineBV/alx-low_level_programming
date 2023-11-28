@@ -5,7 +5,7 @@
 #include <string.h>
 int main(int ac, char **av)
 {
-	int fd1, fd2, toread, toWrit;
+	int fd1, fd2, toread, toWrit, clos1, clos2;
 	char *file_from, *file_to, reaBuf[1024];
 	if (ac != 3)
 	{
@@ -47,14 +47,11 @@ int main(int ac, char **av)
             exit(99);
         }
     }
-	if (close(fd1) != 0)
+	clos1 = close(fd1);
+	clos2 = close(fd2);
+	if (clos1 == -1 || clos2 == -1)
 	{
 		dprintf(2, "Error: Can't close fd1 %d\n", fd1);
-		exit(100);
-	}
-	if (close(fd2) != 0)
-	{
-		dprintf(2, "Error: Can't close fd2 %d\n", fd2);
 		exit(100);
 	}
 	return (0);
