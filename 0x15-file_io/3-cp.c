@@ -24,23 +24,30 @@ int main(int ac, char **av)
 
 	if (fd1 < 0)
 	{
-		dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	toread = read(fd1, reaBuf, 1024);
-	reaBuf[toread] = '\0';
-	fd2 = open(file_to,  O_WRONLY | O_TRUNC | O_CREAT, 0664);
-	if (fd2 < 0)
+	if (toread < 0)
 	{
-		dprintf(2, "Error: Can't write to %s\n", file_from);
-		exit(99);
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
-	toWrit = write(fd2, reaBuf, toread);
-	if (toWrit < 0)
+	fd2 = open(file_to,  O_WRONLY | O_TRUNC | O_CREAT, 0666);
+	if (fd2 < 0)
 	{
 		dprintf(2, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
+	while ((toread = read(fd1, reaBuf, 1024)) > 0)
+    {
+        toWrit = write(fd2, reaBuf, toread);
+        if (toWrit < 0)
+        {
+            dprintf(2, "Error: Can't write to %s\n", file_to);
+            exit(99);
+        }
+}
 	if (close(fd1) == -1)
 	{
 		dprintf(2, "Error: Can't close fd1 %d\n", fd1);
