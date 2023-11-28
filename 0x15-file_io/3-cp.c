@@ -16,7 +16,7 @@ int main(int ac, char **av)
 	file_from = av[1];
 	file_to = av[2];
 	fd1 = open(file_from, O_RDONLY);
-	if (file_from == NULL || fd1 < 0)
+	if (fd1 < 0)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
