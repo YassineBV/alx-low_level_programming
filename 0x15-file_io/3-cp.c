@@ -43,9 +43,13 @@ int main(int ac, char **av)
     }
 	clos1 = close(fd1);
 	clos2 = close(fd2);
-	if (clos1 == -1 || clos2 == -1)
+	if (clos1 == -1)
 	{
-		dprintf(2, "Error: Can't close fd1 %d\n", fd1);
+		
+	}
+	if (clos2 == -1)
+	{
+		dprintf(2, "Error: Can't close fd1 %d\n", fd2);
 		exit(100);
 	}
 	return (0);
