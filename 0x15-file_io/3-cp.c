@@ -35,7 +35,8 @@ int main(int ac, char **av)
 	}
 	while ((toread = read(fd1, reaBuf, 1024)) > 0)
     {
-        toWrit = write(fd2, reaBuf, toread);
+		strcat(reaBuf, "\n");
+        toWrit = write(fd2, reaBuf, toread + 1);
 		if (toread < 0)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", file_from);
