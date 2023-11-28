@@ -6,7 +6,7 @@
 int main(int ac, char **av)
 {
 	int fd1, fd2, toread, toWrit;
-	char *file_from, *file_to, *reaBuf[1024];
+	char *file_from, *file_to, reaBuf[1024];
 	if (ac != 3)
 	{
 		dprintf(2,"Usage: cp file_from file_to\n");
@@ -35,14 +35,12 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't write to %s\n", file_from);
 		exit(99);
 	}
-	 close(fd1);
-	toWrit = write(fd2, reaBuf,sizeof(reaBuf));
+	toWrit = write(fd2, reaBuf, toread);
 	if (toWrit < 0)
 	{
 		dprintf(2, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	close(fd2);
 	if (close(fd1) == -1)
 	{
 		dprintf(2, "Error: Can't close fd1 %d\n", fd1);
