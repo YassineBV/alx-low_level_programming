@@ -27,12 +27,6 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	toread = read(fd1, reaBuf, 1024);
-	if (toread < 0)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
-		exit(98);
-	}
 	fd2 = open(file_to,  O_WRONLY | O_TRUNC | O_CREAT, 0666);
 	if (fd2 < 0)
 	{
@@ -42,6 +36,11 @@ int main(int ac, char **av)
 	while ((toread = read(fd1, reaBuf, 1024)) > 0)
     {
         toWrit = write(fd2, reaBuf, toread);
+		if (toread < 0)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
         if (toWrit < 0)
         {
             dprintf(2, "Error: Can't write to %s\n", file_to);
