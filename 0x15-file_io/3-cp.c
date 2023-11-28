@@ -3,9 +3,26 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+void closeFiles(int fd1, int fd2);
+void closeFiles(int fd1, int fd2)
+{
+    int clos1 = close(fd1);
+    int clos2 = close(fd2);
+
+    if (clos1 == -1)
+    {
+        dprintf(2, "Error: Can't close fd %d\n", fd1);
+        exit(100);
+    }
+    if (clos2 == -1)
+    {
+        dprintf(2, "Error: Can't close fd %d\n", fd2);
+        exit(100);
+    }
+}
 int main(int ac, char **av)
 {
-	int fd1, fd2, toread, toWrit, clos1, clos2;
+	int fd1, fd2, toread, toWrit;
 	char *file_from, *file_to, reaBuf[1024];
 
 	if (ac != 3)
@@ -41,17 +58,6 @@ int main(int ac, char **av)
             exit(99);
         }
     }
-	clos1 = close(fd1);
-	clos2 = close(fd2);
-	if (clos1 == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fd1);
-		exit(100);
-	}
-	if (clos2 == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fd2);
-		exit(100);
-	}
+	closeFiles(fd1, fd2);
 	return (0);
 }
