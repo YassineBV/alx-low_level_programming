@@ -7,6 +7,7 @@ int main(int ac, char **av)
 {
 	int fd1, fd2, toread, toWrit, clos1, clos2;
 	char *file_from, *file_to, reaBuf[1024];
+
 	if (ac != 3)
 	{
 		dprintf(2,"Usage: cp file_from file_to\n");
@@ -14,36 +15,29 @@ int main(int ac, char **av)
 	}
 	file_from = av[1];
 	file_to = av[2];
-
-	if (file_from == NULL)
-	{
-		dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE %s\n", av[1]);
-		exit(98);
-	}
 	fd1 = open(file_from, O_RDONLY);
-
-	if (fd1 < 0)
+	if (file_from == NULL || fd1 < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	fd2 = open(file_to,  O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (fd2 < 0)
 	{
-		dprintf(2, "Error: Can't write to %s\n", file_to);
+		dprintf(2, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	while ((toread = read(fd1, reaBuf, 1024)) > 0)
     {
         if (toread < 0)
     {
-        dprintf(2, "Error: Can't read from file %s\n", file_from);
+        dprintf(2, "Error: Can't read from file %s\n", av[1]);
         exit(98);
     }
         toWrit = write(fd2, reaBuf, toread);
         if (toWrit < 0)
         {
-            dprintf(2, "Error: Can't write to %s\n", file_to);
+            dprintf(2, "Error: Can't write to %s\n", av[2]);
             exit(99);
         }
     }
