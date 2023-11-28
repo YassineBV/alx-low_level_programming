@@ -5,7 +5,7 @@
 #include <string.h>
 int main(int ac, char **av)
 {
-	int fd1, fd2, toread, toWrit;
+	int fd1, fd2, toread, toWrit, total_written;
 	char *file_from, *file_to, reaBuf[1024];
 	if (ac != 3)
 	{
@@ -35,18 +35,22 @@ int main(int ac, char **av)
 	}
 	while ((toread = read(fd1, reaBuf, 1024)) > 0)
     {
-        toWrit = write(fd2, reaBuf, toread);
 		if (toread < 0)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
+        total_written = 0;
+    do {
+        toWrit = write(fd2, reaBuf + total_written, toread - total_written);
         if (toWrit < 0)
         {
             dprintf(2, "Error: Can't write to %s\n", file_to);
             exit(99);
         }
-}
+        total_written += toWrit;
+    } while (total_written < toread);
+    }
 	if (close(fd1) == -1)
 	{
 		dprintf(2, "Error: Can't close fd1 %d\n", fd1);
