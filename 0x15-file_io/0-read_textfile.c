@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	bufread[toread] = '\0';
 	toWrite = write(1, bufread, toread);
-	if (toWrite == -1 || toWrite != toread)
+	if (toWrite == -1)
 		return (0);
 	free(bufread);
 	close(fd);
