@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	bufread = malloc(letters + 1);
+	bufread = malloc(letters);
 
 	if (bufread == NULL)
 		return (0);
