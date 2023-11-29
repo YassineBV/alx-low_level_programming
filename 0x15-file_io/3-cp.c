@@ -16,12 +16,12 @@ void closeFiles(int fd1, int fd2)
 
 	if (clos1 == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 	if (clos2 == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 }
@@ -39,7 +39,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	file_from = av[1];
@@ -47,13 +47,13 @@ int main(int ac, char **av)
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	fd2 = open(file_to,  O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (fd2 == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	while ((toread = read(fd1, reaBuf, 1024)) > 0)
@@ -61,13 +61,13 @@ int main(int ac, char **av)
 		toWrit = write(fd2, reaBuf, toread);
 		if (toWrit < 0)
 		{
-			dprintf(2, "Error: Can't write to %s\n", av[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 	}
 	if (toread == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	closeFiles(fd1, fd2);
