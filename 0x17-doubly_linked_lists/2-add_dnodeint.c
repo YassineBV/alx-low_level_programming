@@ -20,5 +20,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	new_nod->prev = NULL;
 	new_nod->next = *head;
 	*head = new_nod;
+	free(new_nod)
 	return (*head);
 }
