@@ -14,6 +14,7 @@ int sum_dlistint(dlistint_t *head)
 		return (0);
 
 	travers = head;
+	sums += travers->n;
 	while (travers->next != NULL)
 	{
 		travers = travers->next;
